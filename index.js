@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.get("/", (req, res) => {
-  req.send("server is running fine");
+  res.send("server is running fine");
 });
 app.post("/send-request", async (req, res) => {
   const { url, method, headers, body, params } = req.body;
